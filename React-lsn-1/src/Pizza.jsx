@@ -1,10 +1,14 @@
-const Pizza = () => {
+const Pizza = (props) => {
   return (
-    <div>
-      <img src="../src/assets/pizzas/spinaci.jpg" alt="pizza spinachi" />
-      <h2>Pizza Spinachi</h2>
-      <p>Pizza Ingredients</p>
-      <p>Pizza Price</p>
+    <div className="pizza">
+      {/* Here those properties already assigned by the parent MENU are being received here in the PIZZA which is the Child */}
+      <img src={props.photoName} alt="pizza spinachi" />
+
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.price}</span>
+      </div>
     </div>
   );
 };

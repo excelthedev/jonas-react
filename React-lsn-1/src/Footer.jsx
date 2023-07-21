@@ -8,9 +8,7 @@ const Footer = () => {
       ? "We're currently open"
       : " We're closed at the moment, come back later !";
 
-  console.log(openSetTime);
-
-  return <footer>{openSetTime}</footer>;
+  return <footer className="footer  ">{openSetTime}</footer>;
 };
 
 export default Footer;

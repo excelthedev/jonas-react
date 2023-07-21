@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <>
-      <h1 className="header">Excel Fast React Pizza Co.</h1>
-    </>
+    <header className="header">
+      <h1>Excel's Fast React Pizza Co.</h1>
+    </header>
   );
 };
 
