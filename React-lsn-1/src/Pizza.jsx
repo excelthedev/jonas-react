@@ -1,15 +1,17 @@
-const Pizza = (props) => {
+const Pizza = ({ pizzaObj }) => {
+  console.log(pizzaObj);
+  // if (pizzaObj.soldOut) return null;
   return (
-    <div className="pizza">
+    <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
       {/* Here those properties already assigned by the parent MENU are being received here in the PIZZA which is the Child */}
-      <img src={props.photoName} alt="pizza spinachi" />
+      <img src={pizzaObj.photoName} alt="pizza spinachi" />
 
       <div>
-        <h3>{props.name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.price}</span>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.soldOut ? "SOLD OUT" : "$" + pizzaObj.price}</span>
       </div>
-    </div>
+    </li>
   );
 };
 
