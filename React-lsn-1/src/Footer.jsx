@@ -9,7 +9,7 @@ const Footer = () => {
 
   // if (!openSetTime) return <p>CLOSED</p>;
   return (
-    <footer className="footer  ">
+    <footer className="footer">
       {" "}
       {openSetTime ? (
         <Order closeHour={closeHour} openHour={openHour} />

@@ -6,11 +6,11 @@ const initialItems = [
   { id: 3, description: "Oraimo Power Bank", quantity: 1, packed: false },
 ];
 
-const PackingList = () => {
+const PackingList = ({ item }) => {
   return (
     <div className="list">
       <ul>
-        {initialItems.map((item) => (
+        {item.map((item) => (
           <Items key={item.id} item={item} />
         ))}
       </ul>
